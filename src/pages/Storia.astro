@@ -1,0 +1,48 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import storia from "../../public/storia.jpeg";
+---
+
+<Layout title="Storia">
+  <section class="bg-white">
+    <div class="container px-4 mx-auto">
+      <div class="flex flex-wrap justify-center">
+        <div class="lg:w-1/2">
+          <div class="flex flex-wrap justify-between items-center">
+            <div class="w-full mb-10 lg:mt-20 lg:pr-14">
+              <h3
+                class="mb-4 lg:text-3xl text-2xl text-coolGray-900 font-bold tracking-tighter"
+              >
+                Nata osservando il mare delle nostre tre isolette Proratora,
+                Tavolare e Molara
+              </h3>
+              <p
+                class="text-lg md:text-xl leading-8 text-coolGray-500 font-semibold"
+              >
+                Dal 2009, siamo un'affermata azienda multibrand, leader
+                indiscusso in Sardegna nel settore della vendita di prodotti per
+                il risparmio energetico.
+                <br />
+                La nostra passione è guidare il cambiamento verso un futuro più sostenibile,
+                offrendo soluzioni innovative e di alta qualità per rendere ogni
+                ambiente più efficiente e eco-friendly.
+                <br />
+                Un viaggio avvincente nella conservazione delle risorse, dove il
+                tuo risparmio energetico diventa la nostra missione quotidiana.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="">
+          <Image
+            src={storia}
+            alt="A bird sitting on a nest of eggs."
+            class="w-full"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

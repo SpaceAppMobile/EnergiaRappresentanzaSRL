@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/card.astro";
+import climatizzatore from "../../public/Climatizzatore.jpeg";
+import fotovoltaico from "../../public/Fotovoltaico.jpeg";
+import chiller from "../../public/chiller.jpg";
+import scaldacqua from "../../public/ScaldaAcqua.jpeg";
+---
+
+<Layout title="Prodotti">
+  <div
+    class="flex flex-wrap p-5 items-bottom justify-center space-y-4 lg:space-y-0"
+  >
+    <Card
+      title="Climatizzatori"
+      description="I climatizzatori regolano la temperatura e l'umidità in ambienti chiusi, utilizzando un ciclo di refrigerazione. Alcuni modelli filtrano anche l'aria e offrono funzionalità avanzate come il controllo remoto."
+      photoUrl={climatizzatore}
+    />
+    <Card
+      title="Impianto Fotovoltaico"
+      description="Gli impianti fotovoltaici generano elettricità convertendo l'energia solare in energia elettrica attraverso pannelli solari. Possono essere utilizzati per alimentare abitazioni o aziende, contribuendo a ridurre l'impatto ambientale e i costi energetici."
+      photoUrl={fotovoltaico}
+    />
+    <Card
+      title="Chiller"
+      description="I chiller sono sistemi di refrigerazione utilizzati per raffreddare fluidi o ambienti. Attraverso un ciclo di compressione, rimuovono il calore e regolano la temperatura. I chiller sono impiegati in edifici, industrie e processi industriali per mantenere condizioni ottimali di temperatura."
+      photoUrl={chiller}
+    />
+    <Card
+      title="ScaldaAcqua Pompa Di Calore"
+      description="Le pompe di calore per riscaldamento dell'acqua sono dispositivi che sfruttano l'energia termica presente nell'ambiente circostante per riscaldare l'acqua. Utilizzano un ciclo termodinamico per trasferire il calore da una sorgente più fredda all'acqua da riscaldare. Questa tecnologia è efficiente ed ecologica, contribuendo a ridurre i consumi energetici e le emissioni di carbonio nell'ambito del riscaldamento dell'acqua."
+      photoUrl={scaldacqua}
+    />
+    <Card
+      title="Collonine di Ricarica"
+      description="Le colonnine di ricarica sono infrastrutture appositamente progettate per la ricarica di veicoli elettrici. Solitamente, vengono installate in aree pubbliche o private, come parcheggi, stazioni di servizio o aree urbane. Esistono diversi tipi di colonnine di ricarica con diverse potenze e connettori, adatti a diverse esigenze di ricarica."
+      photoUrl="https://qualityenergy.it/wp-content/uploads/2023/05/Colonnina-ricarica-auto-elettrica-e1632922031344.jpeg"
+    />
+  </div>
+</Layout>
