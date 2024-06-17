@@ -1,0 +1,15 @@
+---
+// /blog/index.astro
+import { sanityClient } from "sanity:client";
+import SanityImage from "../components/SanityImage.astro";
+
+const posts = await sanityClient.fetch(
+  `*[_type == "person"] {
+    image
+  }`
+);
+---
+
+<div class="flex flex-wrap gap-2 justify-center">
+  {posts.map((post: any) => <SanityImage node={post.image} width="600" />)}
+</div>
