@@ -13,10 +13,10 @@ importers:
         version: 0.4.1(prettier@3.3.2)(typescript@5.4.5)
       '@astrojs/react':
         specifier: ^3.6.0
-        version: 3.6.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@4.5.3(@types/node@20.14.4))
+        version: 3.6.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@5.3.1(@types/node@20.14.4))
       '@astrojs/svelte':
         specifier: ^5.6.0
-        version: 5.6.0(astro@4.10.3(@types/node@20.14.4)(typescript@5.4.5))(svelte@4.2.18)(typescript@5.4.5)(vite@4.5.3(@types/node@20.14.4))
+        version: 5.6.0(astro@4.10.3(@types/node@20.14.4)(typescript@5.4.5))(svelte@4.2.18)(typescript@5.4.5)(vite@5.3.1(@types/node@20.14.4))
       '@astrojs/tailwind':
         specifier: ^5.1.0
         version: 5.1.0(astro@4.10.3(@types/node@20.14.4)(typescript@5.4.5))(tailwindcss@3.4.4)
@@ -62,9 +62,6 @@ importers:
       sanity:
         specifier: ^3.46.1
         version: 3.46.1(@types/node@20.14.4)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
-      sharp:
-        specifier: ^0.33.4
-        version: 0.33.4
       svelte:
         specifier: ^4.2.18
         version: 4.2.18
@@ -5165,11 +5162,11 @@ snapshots:
     dependencies:
       prismjs: 1.29.0
 
-  '@astrojs/react@3.6.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@4.5.3(@types/node@20.14.4))':
+  '@astrojs/react@3.6.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@5.3.1(@types/node@20.14.4))':
     dependencies:
       '@types/react': 18.3.3
       '@types/react-dom': 18.3.0
-      '@vitejs/plugin-react': 4.3.1(vite@4.5.3(@types/node@20.14.4))
+      '@vitejs/plugin-react': 4.3.1(vite@5.3.1(@types/node@20.14.4))
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       ultrahtml: 1.5.3
@@ -5177,9 +5174,9 @@ snapshots:
       - supports-color
       - vite
 
-  '@astrojs/svelte@5.6.0(astro@4.10.3(@types/node@20.14.4)(typescript@5.4.5))(svelte@4.2.18)(typescript@5.4.5)(vite@4.5.3(@types/node@20.14.4))':
+  '@astrojs/svelte@5.6.0(astro@4.10.3(@types/node@20.14.4)(typescript@5.4.5))(svelte@4.2.18)(typescript@5.4.5)(vite@5.3.1(@types/node@20.14.4))':
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 3.1.1(svelte@4.2.18)(vite@4.5.3(@types/node@20.14.4))
+      '@sveltejs/vite-plugin-svelte': 3.1.1(svelte@4.2.18)(vite@5.3.1(@types/node@20.14.4))
       astro: 4.10.3(@types/node@20.14.4)(typescript@5.4.5)
       svelte: 4.2.18
       svelte2tsx: 0.7.10(svelte@4.2.18)(typescript@5.4.5)
@@ -6978,26 +6975,26 @@ snapshots:
 
   '@shikijs/core@1.7.0': {}
 
-  '@sveltejs/vite-plugin-svelte-inspector@2.1.0(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@4.5.3(@types/node@20.14.4)))(svelte@4.2.18)(vite@4.5.3(@types/node@20.14.4))':
+  '@sveltejs/vite-plugin-svelte-inspector@2.1.0(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.3.1(@types/node@20.14.4)))(svelte@4.2.18)(vite@5.3.1(@types/node@20.14.4))':
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 3.1.1(svelte@4.2.18)(vite@4.5.3(@types/node@20.14.4))
+      '@sveltejs/vite-plugin-svelte': 3.1.1(svelte@4.2.18)(vite@5.3.1(@types/node@20.14.4))
       debug: 4.3.5
       svelte: 4.2.18
-      vite: 4.5.3(@types/node@20.14.4)
+      vite: 5.3.1(@types/node@20.14.4)
     transitivePeerDependencies:
       - supports-color
 
-  '@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@4.5.3(@types/node@20.14.4))':
+  '@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.3.1(@types/node@20.14.4))':
     dependencies:
-      '@sveltejs/vite-plugin-svelte-inspector': 2.1.0(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@4.5.3(@types/node@20.14.4)))(svelte@4.2.18)(vite@4.5.3(@types/node@20.14.4))
+      '@sveltejs/vite-plugin-svelte-inspector': 2.1.0(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.3.1(@types/node@20.14.4)))(svelte@4.2.18)(vite@5.3.1(@types/node@20.14.4))
       debug: 4.3.5
       deepmerge: 4.3.1
       kleur: 4.1.5
       magic-string: 0.30.10
       svelte: 4.2.18
       svelte-hmr: 0.16.0(svelte@4.2.18)
-      vite: 4.5.3(@types/node@20.14.4)
-      vitefu: 0.2.5(vite@4.5.3(@types/node@20.14.4))
+      vite: 5.3.1(@types/node@20.14.4)
+      vitefu: 0.2.5(vite@5.3.1(@types/node@20.14.4))
     transitivePeerDependencies:
       - supports-color
 
@@ -7166,6 +7163,17 @@ snapshots:
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.2
       vite: 4.5.3(@types/node@20.14.4)
+    transitivePeerDependencies:
+      - supports-color
+
+  '@vitejs/plugin-react@4.3.1(vite@5.3.1(@types/node@20.14.4))':
+    dependencies:
+      '@babel/core': 7.24.7
+      '@babel/plugin-transform-react-jsx-self': 7.24.7(@babel/core@7.24.7)
+      '@babel/plugin-transform-react-jsx-source': 7.24.7(@babel/core@7.24.7)
+      '@types/babel__core': 7.20.5
+      react-refresh: 0.14.2
+      vite: 5.3.1(@types/node@20.14.4)
     transitivePeerDependencies:
       - supports-color
 
@@ -7653,6 +7661,7 @@ snapshots:
     dependencies:
       color-name: 1.1.4
       simple-swizzle: 0.2.2
+    optional: true
 
   color2k@2.0.3: {}
 
@@ -7660,6 +7669,7 @@ snapshots:
     dependencies:
       color-convert: 2.0.1
       color-string: 1.9.1
+    optional: true
 
   combined-stream@1.0.8:
     dependencies:
@@ -7882,7 +7892,8 @@ snapshots:
 
   dequal@2.0.3: {}
 
-  detect-libc@2.0.3: {}
+  detect-libc@2.0.3:
+    optional: true
 
   detect-node-es@1.1.0: {}
 
@@ -8550,7 +8561,8 @@ snapshots:
 
   is-arrayish@0.2.1: {}
 
-  is-arrayish@0.3.2: {}
+  is-arrayish@0.3.2:
+    optional: true
 
   is-binary-path@2.1.0:
     dependencies:
@@ -10176,6 +10188,7 @@ snapshots:
       '@img/sharp-wasm32': 0.33.4
       '@img/sharp-win32-ia32': 0.33.4
       '@img/sharp-win32-x64': 0.33.4
+    optional: true
 
   shebang-command@2.0.0:
     dependencies:
@@ -10196,6 +10209,7 @@ snapshots:
   simple-swizzle@0.2.2:
     dependencies:
       is-arrayish: 0.3.2
+    optional: true
 
   simple-wcswidth@1.0.1: {}
 
@@ -10797,10 +10811,6 @@ snapshots:
     optionalDependencies:
       '@types/node': 20.14.4
       fsevents: 2.3.3
-
-  vitefu@0.2.5(vite@4.5.3(@types/node@20.14.4)):
-    optionalDependencies:
-      vite: 4.5.3(@types/node@20.14.4)
 
   vitefu@0.2.5(vite@5.3.1(@types/node@20.14.4)):
     optionalDependencies:
