@@ -1,4 +1,4 @@
-import { defineField, defineType } from "sanity";
+import { defineArrayMember, defineField, defineType } from "sanity";
 import { MdPerson as icon } from "react-icons/md";
 
 export default defineType({
@@ -25,7 +25,8 @@ export default defineType({
     defineField({
       name: "foto",
       title: "Foto",
-      type: "image",
+      type: "array",
+      of: [{ type: "image" }],
       // options: {
       //   hotspot: true,
       // },
