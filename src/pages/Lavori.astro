@@ -16,8 +16,8 @@ const posts = await sanityClient.fetch(
   <div class="flex flex-col col-span-1 gap-2 justify-center items-center">
     {
       posts.map((post: any) => {
-        if (post.image && post.image.asset) {
-          const image = post.image.asset._ref;
+        if (post.foto && post.foto.asset) {
+          const image = post.foto.asset._ref;
           const imageUrl = image.split("-");
           const width = Number(imageUrl[imageUrl.length - 2].split("x")[0]);
           const height = Number(imageUrl[imageUrl.length - 2].split("x")[1]);
@@ -34,7 +34,7 @@ const posts = await sanityClient.fetch(
                 height: (height * 400) / width + "px",
               }}
             >
-              <SanityImage node={post.image} width={400} />
+              <SanityImage node={post.foto} width={400} />
               <div
                 class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100 flex items-center justify-center"
                 style={{
@@ -43,7 +43,7 @@ const posts = await sanityClient.fetch(
                 }}
               >
                 <h1 class="title-font text-4xl font-medium text-gray-900 mb-3 text-center">
-                  {post.name}
+                  {post.nome}
                 </h1>
               </div>
             </div>
