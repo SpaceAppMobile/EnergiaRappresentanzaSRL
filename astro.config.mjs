@@ -11,6 +11,9 @@ export default defineConfig({
     service: passthroughImageService(),
   },
   integrations: [
+    // tailwind({
+    //   applyBaseStyles: false,
+    // }),
     tailwind(),
     react(),
     svelte(),

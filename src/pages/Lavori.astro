@@ -2,14 +2,63 @@
 // /blog/index.astro
 import { sanityClient } from "sanity:client";
 import SanityImage from "../components/SanityImage.astro";
+import Layout from "../layouts/Layout.astro";
 
 const posts = await sanityClient.fetch(
-  `*[_type == "person"] {
-    image
+  `*[_type == "lavoro"] {
+    nome,
+    foto
   }`
 );
 ---
 
-<div class="flex flex-wrap gap-2 justify-center">
-  {posts.map((post: any) => <SanityImage node={post.image} width="600" />)}
-</div>
+<Layout title="Prodotti">
+  <div class="flex flex-col col-span-1 gap-2 justify-center items-center">
+    {
+      posts.map((post: any) => {
+        if (post.image && post.image.asset) {
+          const image = post.image.asset._ref;
+          const imageUrl = image.split("-");
+          const width = Number(imageUrl[imageUrl.length - 2].split("x")[0]);
+          const height = Number(imageUrl[imageUrl.length - 2].split("x")[1]);
+          console.log(imageUrl[imageUrl.length - 2]);
+          console.log(width);
+          console.log(height);
+          console.log((width * 400) / height);
+
+          return (
+            <div
+              class={"flex relative w-full"}
+              style={{
+                width: 400 + "px",
+                height: (height * 400) / width + "px",
+              }}
+            >
+              <SanityImage node={post.image} width={400} />
+              <div
+                class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100 flex items-center justify-center"
+                style={{
+                  width: 400 + "px",
+                  height: (height * 400) / width + "px",
+                }}
+              >
+                <h1 class="title-font text-4xl font-medium text-gray-900 mb-3 text-center">
+                  {post.name}
+                </h1>
+              </div>
+            </div>
+          );
+        }
+      })
+    }
+  </div>
+</Layout>
+<!-- <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100 flex items-center justify-center">
+            <h1 class="title-font text-4xl font-medium text-gray-900 mb-3 text-center">
+              {post.name}
+            </h1>
+                // style={{
+            //   width: width + "px",
+            //   height: height + "px",
+            // }}
+          </div> -->

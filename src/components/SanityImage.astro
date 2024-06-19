@@ -17,9 +17,19 @@ try {
     node &&
     node.asset &&
     builder.image(node).width(width).fit("max").auto("format");
+  // console.log(image);
 } catch (error) {
   console.error(error);
 }
 ---
 
-{image && <img src={image.url()} alt={node.alt || ""} title={node.alt} />}
+{
+  image && (
+    <img
+      src={image.url()}
+      alt={node.alt || ""}
+      title={node.alt}
+      class="absolute inset-0 w-full h-full object-fit"
+    />
+  )
+}
