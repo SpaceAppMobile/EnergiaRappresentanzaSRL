@@ -13,7 +13,9 @@ const posts = await sanityClient.fetch(
 ---
 
 <Layout title="Prodotti">
-  <div class="flex flex-col col-span-1 gap-2 justify-center items-center">
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 gap-2 justify-center items-center align-center w-full h-full"
+  >
     {
       posts.map((post: any) => {
         if (post.foto) {
@@ -28,24 +30,28 @@ const posts = await sanityClient.fetch(
             console.log(height);
             console.log((width * 400) / height);
             return (
-              <div
-                class={"flex relative w-full"}
-                style={{
-                  width: 400 + "px",
-                  height: (height * 400) / width + "px",
-                }}
-              >
-                <SanityImage node={element} width={400} />
+              <div class="flex justify-center items-center align-center">
                 <div
-                  class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100 flex items-center justify-center"
+                  class={
+                    "flex relative items-center align-center justify-center"
+                  }
                   style={{
                     width: 400 + "px",
                     height: (height * 400) / width + "px",
                   }}
                 >
-                  <h1 class="title-font text-4xl font-medium text-gray-900 mb-3 text-center">
-                    {post.nome}
-                  </h1>
+                  <SanityImage node={element} width={400} />
+                  <div
+                    class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100 flex items-center justify-center"
+                    style={{
+                      width: 400 + "px",
+                      height: (height * 400) / width + "px",
+                    }}
+                  >
+                    <h1 class="title-font text-4xl font-medium text-gray-900 mb-3 text-center">
+                      {post.nome}
+                    </h1>
+                  </div>
                 </div>
               </div>
             );
