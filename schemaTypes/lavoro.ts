@@ -39,6 +39,6 @@ export default defineType({
     }),
   ],
   preview: {
-    select: { title: "nome", media: "foto" },
+    select: { title: "name", media: "foto" },
   },
 });
