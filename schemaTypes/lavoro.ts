@@ -13,6 +13,12 @@ export default defineType({
       type: "string",
       description: "Inserisci il nome del lavoro",
     }),
+    defineField({
+      title: "Name",
+      name: "name",
+      type: "text",
+      description: "Inserisci il nome del lavoros",
+    }),
     // defineField({
     //   name: 'slug',
     //   title: 'Slug',
