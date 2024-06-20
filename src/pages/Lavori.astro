@@ -6,7 +6,7 @@ import Layout from "../layouts/Layout.astro";
 
 const posts = await sanityClient.fetch(
   `*[_type == "lavoro"] {
-    nome,
+    name,
     foto
   }`
 );
@@ -50,7 +50,7 @@ const posts = await sanityClient.fetch(
                     onclick=""
                   >
                     <h1 class="title-font text-4xl font-medium text-gray-900 mb-3 text-center">
-                      {post.nome}
+                      {post.name}
                     </h1>
                   </div>
                 </div>

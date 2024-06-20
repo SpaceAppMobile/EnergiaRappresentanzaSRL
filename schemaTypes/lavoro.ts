@@ -7,17 +7,17 @@ export default defineType({
   type: "document",
   icon,
   fields: [
+    // defineField({
+    //   name: "nome",
+    //   title: "Nome",
+    //   type: "string",
+    //   description: "Inserisci il nome del lavoro",
+    // }),
     defineField({
-      name: "nome",
-      title: "Nome",
-      type: "string",
-      description: "Inserisci il nome del lavoro",
-    }),
-    defineField({
-      title: "Name",
+      title: "Nome del lavoro",
       name: "name",
       type: "text",
-      description: "Inserisci il nome del lavoros",
+      description: "Inserisci il nome del lavoro",
     }),
     // defineField({
     //   name: 'slug',
