@@ -13,52 +13,60 @@ const posts = await sanityClient.fetch(
 ---
 
 <Layout title="Prodotti">
-  <div
-    class="grid grid-cols-1 md:grid-cols-2 gap-2 justify-center items-center align-center w-full h-full"
-  >
-    {
-      posts.map((post: any) => {
-        console.log(post.name);
-        console.log("--------------------------------");
-        if (post.foto) {
-          return post.foto.map((element: any) => {
-            const image = element.asset._ref;
-            const imageUrl = image.split("-");
-            const width = Number(imageUrl[imageUrl.length - 2].split("x")[0]);
-            const height = Number(imageUrl[imageUrl.length - 2].split("x")[1]);
+  <section class="bg-white">
+    <div class="container px-4 mx-auto">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-2 justify-center items-center align-center w-full h-full"
+      >
+        {
+          posts.map((post: any) => {
+            console.log(post.name);
+            console.log("--------------------------------");
+            if (post.foto) {
+              return post.foto.map((element: any) => {
+                const image = element.asset._ref;
+                const imageUrl = image.split("-");
+                const width = Number(
+                  imageUrl[imageUrl.length - 2].split("x")[0]
+                );
+                const height = Number(
+                  imageUrl[imageUrl.length - 2].split("x")[1]
+                );
 
-            return (
-              <div class="flex justify-center items-center align-center">
-                <div
-                  class={
-                    "flex relative items-center align-center justify-center"
-                  }
-                  style={{
-                    width: 400 + "px",
-                    height: (height * 400) / width + "px",
-                  }}
-                >
-                  <SanityImage node={element} width={400} />
-                  <div
-                    class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100 flex items-center justify-center"
-                    style={{
-                      width: 400 + "px",
-                      height: (height * 400) / width + "px",
-                    }}
-                    onclick=""
-                  >
-                    <p class="title-font text-xl font-medium text-gray-900 mb-3 text-center whitespace-pre">
-                      {post.name}
-                    </p>
+                return (
+                  <div class="flex justify-center items-center align-center">
+                    <div
+                      class={
+                        "flex relative items-center align-center justify-center"
+                      }
+                      style={{
+                        width: 400 + "px",
+                        height: (height * 350) / width + "px",
+                      }}
+                    >
+                      <SanityImage node={element} width={350} />
+                      <div
+                        class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100 flex items-center justify-center"
+                        style={{
+                          width: 350 + "px",
+                          height: (height * 350) / width + "px",
+                        }}
+                        onclick=""
+                      >
+                        <p class="title-font text-xl font-medium text-gray-900 mb-3 text-center whitespace-pre">
+                          {post.name}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            );
-          });
+                );
+              });
+            }
+          })
         }
-      })
-    }
-  </div>
+      </div>
+    </div>
+  </section>
 </Layout>
 <!-- <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100 flex items-center justify-center">
             <h1 class="title-font text-4xl font-medium text-gray-900 mb-3 text-center">
