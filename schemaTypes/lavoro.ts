@@ -17,7 +17,19 @@ export default defineType({
       title: "Nome del lavoro",
       name: "name",
       type: "text",
-      description: "Inserisci il nome del lavoro",
+      description: "Inserisci Il nome del lavoro",
+    }),
+    defineField({
+      name: "city",
+      title: "Città",
+      type: "string",
+      description: "Inserisci Il la città in cui si è svolto il lavoro",
+    }),
+    defineField({
+      name: "type",
+      title: "Tipologia",
+      type: "string",
+      description: "Inserisci La tipologia del lavoro svolto",
     }),
     // defineField({
     //   name: 'slug',
