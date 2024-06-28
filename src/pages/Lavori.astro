@@ -7,12 +7,14 @@ import Layout from "../layouts/Layout.astro";
 const posts = await sanityClient.fetch(
   `*[_type == "lavoro"] {
     name,
-    foto
+    foto,
+    city,
+    type
   }`
 );
 ---
 
-<Layout title="Prodotti">
+<Layout title="Lavori">
   <section class="bg-white">
     <div class="container px-4 mx-auto">
       <div
@@ -46,15 +48,20 @@ const posts = await sanityClient.fetch(
                     >
                       <SanityImage node={element} width={350} />
                       <div
-                        class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100 flex items-center justify-center"
-                        style={{
-                          width: 350 + "px",
-                          height: (height * 350) / width + "px",
-                        }}
+                        class="relative z-10 w-full h-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100 flex items-center justify-center"
                         onclick=""
                       >
-                        <p class="title-font text-xl font-medium text-gray-900 mb-3 text-center whitespace-pre">
+                        <p class="title-font text-xl font-medium text-gray-900 mb-3 text-center whitespace-normal ">
                           {post.name}
+                          <br />
+                          {post.type &&
+                            post.type != "" &&
+                            "Tipologia: " + post.type}
+                          {post.type && post.type != "" && <br />}
+                          {post.city &&
+                            post.city != "" &&
+                            "Città: " + post.city}
+                          {post.city && post.city != "" && <br />}
                         </p>
                       </div>
                     </div>
