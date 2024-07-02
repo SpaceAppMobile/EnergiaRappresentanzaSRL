@@ -18,7 +18,7 @@ const posts = await sanityClient.fetch(
   <section class="bg-white">
     <div class="container px-4 mx-auto">
       <div
-        class="grid grid-cols-1 md:grid-cols-2 gap-2 justify-center items-center align-center w-full h-full"
+        class="grid grid-cols-1 md:grid-cols-4 gap-2 justify-center items-center align-center w-full h-full"
       >
         {
           posts.map((post: any) => {
@@ -36,6 +36,55 @@ const posts = await sanityClient.fetch(
                 );
 
                 return (
+                  <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mt-5">
+                    {" "}
+                    <div
+                      class={
+                        "flex relative items-center align-center justify-center mx-auto mt-5 "
+                      }
+                      style={{
+                        width: 300 + "px",
+                        height: (height * 300) / width + "px",
+                      }}
+                    >
+                      {" "}
+                      <SanityImage node={element} width={300} />
+                    </div>
+                    <div class="p-5">
+                      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">
+                        {post.name}
+                      </h5>
+
+                      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-center">
+                        {post.type &&
+                          post.type != "" &&
+                          "Tipologia: " + post.type}
+                        {post.type && post.type != "" && <br />}
+                        {post.city && post.city != "" && "Città: " + post.city}
+                        {post.city && post.city != "" && <br />}
+                      </p>
+                    </div>
+                  </div>
+                );
+              });
+            }
+          })
+        }
+      </div>
+    </div>
+  </section>
+</Layout>
+<!-- <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100 flex items-center justify-center">
+            <h1 class="title-font text-4xl font-medium text-gray-900 mb-3 text-center">
+              {post.name}
+            </h1>
+                // style={{
+            //   width: width + "px",
+            //   height: height + "px",
+            // }}
+          </div> -->
+
+<!-- (
                   <div class="flex justify-center items-center align-center">
                     <div
                       class={
@@ -66,21 +115,4 @@ const posts = await sanityClient.fetch(
                       </div>
                     </div>
                   </div>
-                );
-              });
-            }
-          })
-        }
-      </div>
-    </div>
-  </section>
-</Layout>
-<!-- <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100 flex items-center justify-center">
-            <h1 class="title-font text-4xl font-medium text-gray-900 mb-3 text-center">
-              {post.name}
-            </h1>
-                // style={{
-            //   width: width + "px",
-            //   height: height + "px",
-            // }}
-          </div> -->
+                ); -->
