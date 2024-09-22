@@ -21,6 +21,6 @@ export default defineType({
     }),
   ],
   preview: {
-    select: { title: "link" },
+    select: { title: "nome" },
   },
 });
