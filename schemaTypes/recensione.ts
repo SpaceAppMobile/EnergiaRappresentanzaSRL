@@ -8,6 +8,12 @@ export default defineType({
   icon,
   fields: [
     defineField({
+      title: "Nome",
+      name: "nome",
+      type: "text",
+      description: "Inserisci Il nome",
+    }),
+    defineField({
       title: "Link Recensione",
       name: "link",
       type: "text",

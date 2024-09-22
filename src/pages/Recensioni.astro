@@ -6,6 +6,7 @@ import Layout from "../layouts/Layout.astro";
 
 const recensioni = await sanityClient.fetch(
   `*[_type == "recensione"] {
+    nome,
     link
   }`
 );
@@ -14,17 +15,23 @@ const recensioni = await sanityClient.fetch(
 <Layout title="Contatti">
   <div class="lg:grid lg:grid-cols-3 pt-10">
     {
-      recensioni.map((recensione: any) => {
-        return (
-          <div class="w-full">
-            <iframe
-              src={recensione.link}
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-              class="h-[250px] w-11/12 m-auto"
-            />
-          </div>
-        );
-      })
+      recensioni
+        .sort((a, b) => b.nome.localeCompare(a.nome))
+        .map((recensione: any) => {
+          let linkExtracted = recensione.link.slice(13);
+          linkExtracted = linkExtracted.split('"')[0];
+          console.log(linkExtracted);
+
+          return (
+            <div class="w-full">
+              <iframe
+                src={linkExtracted}
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                class="h-[250px] w-11/12 m-auto"
+              />
+            </div>
+          );
+        })
     }
   </div>
 </Layout>;
