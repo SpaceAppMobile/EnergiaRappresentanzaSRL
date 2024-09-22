@@ -16,7 +16,7 @@ const recensioni = await sanityClient.fetch(
   <div class="lg:grid lg:grid-cols-3 pt-10">
     {
       recensioni
-        .sort((a, b) => b.nome.localeCompare(a.nome))
+        .sort((a, b) => a.nome.localeCompare(b.nome))
         .map((recensione: any) => {
           let linkExtracted = recensione.link.slice(13);
           linkExtracted = linkExtracted.split('"')[0];
