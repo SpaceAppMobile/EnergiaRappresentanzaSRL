@@ -1,0 +1,33 @@
+---
+// /blog/index.astro
+import { sanityClient } from "sanity:client";
+import SanityImage from "../components/SanityImage.astro";
+import Layout from "../layouts/Layout.astro";
+
+const recensioni = await sanityClient.fetch(
+  `*[_type == "recensione"] {
+    link
+  }`
+);
+---
+
+<Layout title="Contatti">
+  <div class="lg:grid lg:grid-cols-3 pt-10">
+    {
+      recensioni.map((recensione: any) => {
+        return (
+          <div class="w-full">
+            <iframe
+              src={recensione.link}
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              class="h-[250px] w-11/12 m-auto"
+            />
+          </div>
+        );
+      })
+    }
+  </div>
+</Layout>;
+
+<!-- https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fclaudio.lai.9%2Fposts%2Fpfbid0PZ72aAZE3MREnAEgkiVXuY6UdrpAjsFo9HYmTEptHZVRtRLUsNBDcCaYogSWkCtbl&show_text=true&width=500 -->
+<!-- <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmarcello.atzori.54%2Fposts%2Fpfbid0T5t5Aj4E3iXsmcJQrhaF1N19qF78y8tenVqgeF8Be3mbrW6vaXe3tjXhU44AzwBfl&show_text=true&width=500" width="500" height="189" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe> -->
