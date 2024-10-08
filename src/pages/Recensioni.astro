@@ -64,6 +64,7 @@ const recensioni = await sanityClient.fetch(
             const width = Number(imageUrl[imageUrl.length - 2].split("x")[0]);
             const height = Number(imageUrl[imageUrl.length - 2].split("x")[1]);
 
+            console.log(recensione.foto);
             return (
               <div
                 class={
@@ -76,7 +77,13 @@ const recensioni = await sanityClient.fetch(
                 }}
               >
                 {" "}
-                <SanityImage node={recensione.foto} width={350} />
+                {/* <img
+                  src={image}
+                  alt={recensione.foto.alt}
+                  title={recensione.foto.alt}
+                  class="absolute inset-0 w-full h-[250px] object-fit rounded-lg"
+                /> */}
+                <SanityImage node={recensione.foto} />
               </div>
             );
           }
