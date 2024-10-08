@@ -19,6 +19,11 @@ export default defineType({
       type: "text",
       description: "Inserisci Il link della recensione",
     }),
+    defineField({
+      name: "foto",
+      title: "Foto",
+      type: "image",
+    }),
   ],
   preview: {
     select: { title: "nome" },

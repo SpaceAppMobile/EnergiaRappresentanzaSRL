@@ -13,6 +13,30 @@ const recensioni = await sanityClient.fetch(
 ---
 
 <Layout title="Contatti">
+  <!-- <div id="fb-root"></div>
+  <script
+    async
+    defer
+    crossorigin="anonymous"
+    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0"
+  ></script>
+
+  <div
+    class="fb-post"
+    data-href="https://www.facebook.com/comfortrinnovabile/posts/pfbid02DjNMowp23uPdDh3bxRKh4qotUAMS28JR6WRihtm96VfMYSE1GrQyMDhYZvtqFawKl/?m2w"
+    data-width="500"
+  >
+  </div>
+  <iframe
+    src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmarcello.atzori.54%2Fposts%2Fpfbid02WrCUKxc1uFuPfEb542WNWTQxWYFSX3jRZVH47FstMkHx1Sc6QhPhrHii5SxsJTPrl?no_redirect=1"
+    width="500"
+    height="189"
+    style="border:none;overflow:hidden"
+    scrolling="no"
+    frameborder="0"
+    allowfullscreen="true"
+    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+  ></iframe> -->
   <div class="lg:grid lg:grid-cols-3 pt-10">
     {
       recensioni
@@ -27,6 +51,7 @@ const recensioni = await sanityClient.fetch(
               <iframe
                 src={linkExtracted}
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                sandbox="allow-same-origin allow-scripts"
                 class="h-[250px] w-11/12 m-auto"
               />
             </div>
@@ -34,7 +59,7 @@ const recensioni = await sanityClient.fetch(
         })
     }
   </div>
-</Layout>;
+</Layout>
 
 <!-- https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fclaudio.lai.9%2Fposts%2Fpfbid0PZ72aAZE3MREnAEgkiVXuY6UdrpAjsFo9HYmTEptHZVRtRLUsNBDcCaYogSWkCtbl&show_text=true&width=500 -->
 <!-- <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmarcello.atzori.54%2Fposts%2Fpfbid0T5t5Aj4E3iXsmcJQrhaF1N19qF78y8tenVqgeF8Be3mbrW6vaXe3tjXhU44AzwBfl&show_text=true&width=500" width="500" height="189" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe> -->
